@@ -1,3 +1,4 @@
+#you can click the numbers or use the keypad
 import pygame, sys
 from pygame.locals import *
 
