@@ -92,7 +92,7 @@ def main():
         pygame.display.update()
 
 def getButton(mousex, mousey):
-    value = 0
+    value = ''
     number = True
     if ((mousex>0)&(mousex<50)):
         if((mousey>=0)&(mousey<50)):
@@ -149,7 +149,7 @@ def getButton(mousex, mousey):
     return (value, number)
 
 def getPress (keypressed):
-    value = 0
+    value = ''
     number = True
     goodInput = True
     if keypressed == K_1:
@@ -254,6 +254,7 @@ def getPress (keypressed):
 
 def concatAndOperate (value, number, error, OldNum, NewNum, operation, guess):
     if number:
+        print NewNum, value
         NewNum = NewNum + value
         calcOutput = calcNumberFont.render(NewNum, True, black, white)
     elif (value == 'Enter'):
